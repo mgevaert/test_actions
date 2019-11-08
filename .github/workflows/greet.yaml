@@ -6,10 +6,11 @@ jobs:
     name: Greeting
     runs-on: ubuntu-18.04
     steps:
-        -run: |
-            DI='quay.io/pypa/manylinux1_x86_64'
-            ls -al /
-            echo 'testing'
-            docker pull $DI
-            docker images
-            docker run --rm $DI sh -c 'echo "inside docker"; ls -al /'
+        - name: first
+          run: |
+              DI='quay.io/pypa/manylinux1_x86_64'
+              ls -al /
+              echo 'testing'
+              docker pull $DI
+              docker images
+              docker run --rm $DI sh -c 'echo "inside docker"; ls -al /'
