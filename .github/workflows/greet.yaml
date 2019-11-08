@@ -8,8 +8,8 @@ jobs:
     steps:
         -run: |
             DI='quay.io/pypa/manylinux1_x86_64'
-            ls /
+            ls -al /
             echo 'testing'
             docker pull $DI
             docker images
-            docker run --rm $DI sh -c 'echo "inside docker"; ls /'
+            docker run --rm $DI sh -c 'echo "inside docker"; ls -al /'
